@@ -1,0 +1,40 @@
+<div fxLayout="row">
+  <div fxFlex></div>
+  <mat-card fxFlex="300px">
+    
+<h1>¡Bienvenido!</h1>
+<div>
+  <mat-form-field>  
+    <input matInput placeholder="Nombre"  [(ngModel)]="model.search"
+    (ngModelChange)="doSearch($event)" minlength="2" name="search" #search="ngModel">
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field>
+      <input matInput placeholder="Apellido" type="text" class="example-right-align">
+    </mat-form-field>
+</div>
+
+<div>
+  <mat-form-field>
+      <input matInput placeholder="DNI" type="text" class="example-right-align">
+    </mat-form-field>
+</div>
+
+<div>
+<mat-form-field>
+  <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+</mat-form-field>
+</div>
+
+<div>
+<button mat-raised-button color="primary" routerLink="/administracion-escribanias">Ingresar</button>
+<span class="flex-spacer"></span>
+<button mat-raised-button color="primary" routerLink="/registrarse">Registrarse</button>
+</div>
+
+  </mat-card>
+  <div fxFlex></div>
+</div>
