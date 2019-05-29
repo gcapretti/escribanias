@@ -25,7 +25,7 @@ import { AdministracionEscribaniasComponent } from './administracion-escribanias
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
