@@ -2,14 +2,14 @@
   <h1>Bienvenido</h1>
 <form action="/action_page.php">
   <div class="form-group">
-      <label for="uname">Username:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+      <label for="uname">CUIT:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Ingrese CUIT" name="CUIT" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <input type="password" class="form-control" id="pwd" placeholder="Ingrese password" name="pswd" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
@@ -21,5 +21,6 @@
       </label>
     </div>
   <button mat-raised-button color="primary" routerLink="/administracion-escribanias">Ingresar</button>
+  <button mat-raised-button color="primary" routerLink="/detalle-escribania">Ingresar a detalle</button>
 </form>
 </div>

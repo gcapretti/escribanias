@@ -9,13 +9,15 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AdministracionEscribaniasComponent } from './administracion-escribanias/administracion-escribanias.component';
+import { DetalleEscribaniaComponent } from './detalle-escribania/detalle-escribania.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdministracionEscribaniasComponent
+    AdministracionEscribaniasComponent,
+    DetalleEscribaniaComponent
   ],
   imports: [
     BrowserModule,
