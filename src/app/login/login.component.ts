@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel, Validators } from '@angular/forms'
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-login',
@@ -7,19 +7,42 @@ import { NgModel, Validators } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
+  username : string;
+  password : string;
 
-  model = {
-    search: '',
+  constructor(private router: Router) { 
   }
-
-  constructor() { }
 
   ngOnInit() {
   }
 
-  doSearch(searchValue) {
+  ingresar() {
+    
 
-    console.log(searchValue);
+    let jsonUsuarios = [
+      {
+        "username": "admin",
+        "password": "12345",
+        "es_admin": true
+        
+      },
+      {
+        "username": "client",
+        "password": "12345",
+        "es_admin": false
+      }
+    ]
+
+    console.log(jsonUsuarios.filter(x => x.username === this.username && x.password === this.password)[0].es_admin);
+
+    if (jsonUsuarios.filter(x => x.username === this.username && x.password === this.password)[0].es_admin){
+      this.router.navigate(['/administracion-escribanias'])
+    }
+    else{
+      this.router.navigate(['/detalle-escribania'])
+    }
+
   }
 
 }

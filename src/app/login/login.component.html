@@ -1,26 +1,22 @@
 <div class="container">
   <h1>Bienvenido</h1>
-<form action="/action_page.php">
-  <div class="form-group">
-      <label for="uname">CUIT:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Ingrese CUIT" name="CUIT" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
+  <div class="col-md-6 offset-md-3">
+  <div class="card">
+    <div class="card-body">
+      <form action="/action_page.php">
+        <div class="form-group">
+            <label for="uname">CUIT:</label>
+            <input type="text" class="form-control" [(ngModel)]="username" placeholder="Ingrese CUIT" name="CUIT" required>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Ingrese password" name="pswd" required>
+          </div>
+          <div class="text-center">
+            <button mat-raised-button color="primary" (click)="ingresar(username.Value, password.Value)">Ingresar</button>
+          </div>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Ingrese password" name="pswd" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Check this checkbox to continue.</div>
-      </label>
-    </div>
-  <button mat-raised-button color="primary" routerLink="/administracion-escribanias">Ingresar</button>
-  <button mat-raised-button color="primary" routerLink="/detalle-escribania">Ingresar a detalle</button>
-</form>
+  </div>
+  </div>  
 </div>
