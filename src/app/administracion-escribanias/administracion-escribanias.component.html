@@ -27,7 +27,7 @@
         <tbody>
           <!-- <tr ng-repeat="escribania in Escribanias"> -->
           <!-- Registro clonable -->
-          <tr *ngFor="let escribania of listaEscribanias">
+          <tr *ngFor="let escribania of listaEscribanias" [attr.cuit]="escribania.cuit">
             <td class="pt-3-half" contenteditable="false">{{escribania.razonsocial}}</td>
             <td class="pt-3-half" contenteditable="false">{{escribania.cuit}}</td> 
             <td class="pt-3-half" contenteditable="false">{{escribania.email}}</td>
@@ -38,8 +38,7 @@
               <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
             </td>
             <td class="pt-3-half">
-              <span class="table-remove"><a href="#!" class="indigo-text"><i class="fa fa-trash"
-                    aria-hidden="true" type="button"></i></a></span>
+                <button id="remove" class="indigo-text" class="table-remove" aria-hidden="true" class="fa fa-trash" (click)="deleteRow(escribania.cuit)"></button>
             </td>
           </tr>
         </tbody>

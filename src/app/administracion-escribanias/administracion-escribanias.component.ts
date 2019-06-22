@@ -90,6 +90,14 @@ export class AdministracionEscribaniasComponent {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
   }
 
+  deleteRow(cuit){
+    for(let i = 0; i < this.listaEscribanias.length; ++i){
+        if (this.listaEscribanias[i].cuit === cuit) {
+            this.listaEscribanias.splice(i,1);
+        }
+    }
+}
+
   leerDatos() {
     let jsonEscribanias = [
       {
