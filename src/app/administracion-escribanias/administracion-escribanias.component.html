@@ -3,86 +3,43 @@
   <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Escribanias disponibles</h3>
   <div class="card-body">
     <div id="table" class="table-editable">
-      <span class="table-add float-right mb-3 mr-2"><a routerLink="/detalle-escribania" class="text-success"><i
-            class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
-      
-            <span class="table-add float-right mb-6 mr-2"><input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
-            </span>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar" aria-label="Buscar"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="table-add float-center mr-2 ml-2"><a routerLink="/detalle-escribania" class="text-success"><i
+                class="fa fa-plus fa-2x" aria-hidden="true"></i></a></span>
+        </div>
+      </div>
       <table class="table table-bordered table-responsive-md table-striped text-center">
         <thead>
           <tr>
-            <th class="text-center">Nombre</th>
+            <th class="text-center">Denominación</th>
             <th class="text-center">CUIL/CUIT</th>
             <th class="text-center">Email</th>
+            <th class="text-center">Dirección</th>
             <th class="text-center">Ciudad</th>
-            <th class="text-center">Pais</th>
             <th class="text-center">Ver Mas</th>
             <th class="text-center">Editar</th>
             <th class="text-center">Borrar</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Escribania Numero 1</td>
-            <td class="pt-3-half" contenteditable="true">30-12345678-1</td>
-            <td class="pt-3-half" contenteditable="true">escribania.1@escribania.com</td>
-            <td class="pt-3-half" contenteditable="true">Buenos Aires</td>
-            <td class="pt-3-half" contenteditable="true">Argentina</td>
+          <!-- <tr ng-repeat="escribania in Escribanias"> -->
+          <!-- Registro clonable -->
+          <tr *ngFor="let escribania of listaEscribanias">
+            <td class="pt-3-half" contenteditable="false">{{escribania.razonsocial}}</td>
+            <td class="pt-3-half" contenteditable="false">{{escribania.cuit}}</td> 
+            <td class="pt-3-half" contenteditable="false">{{escribania.email}}</td>
+            <td class="pt-3-half" contenteditable="false">{{escribania.direccion}}</td>
+            <td class="pt-3-half" contenteditable="false">{{escribania.ciudad}}</td>
             <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
             <td class="pt-3-half">
               <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
             </td>
-            <td>
-              <span class="table-remove"><button type="button"
-                  class="btn btn-danger btn-rounded btn-sm my-0">Borrar</button></span>
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Escribania Lopez</td>
-            <td class="pt-3-half" contenteditable="true">30-9876654-2</td>
-            <td class="pt-3-half" contenteditable="true">lopez@escribania.com</td>
-            <td class="pt-3-half" contenteditable="true">Cordoba</td>
-            <td class="pt-3-half" contenteditable="true">Argentina</td>
-            <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
             <td class="pt-3-half">
-              <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
-            </td>
-            <td>
-              <span class="table-remove"><button type="button"
-                  class="btn btn-danger btn-rounded btn-sm my-0">Borrar</button></span>
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr>
-            <td class="pt-3-half" contenteditable="true">Escribania Roldan</td>
-            <td class="pt-3-half" contenteditable="true">30-456789-7</td>
-            <td class="pt-3-half" contenteditable="true">roldan@escribania.com</td>
-            <td class="pt-3-half" contenteditable="true">Tucuman</td>
-            <td class="pt-3-half" contenteditable="true">Argentina</td>
-            <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
-            <td class="pt-3-half">
-              <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
-            </td>
-            <td>
-              <span class="table-remove"><button type="button"
-                  class="btn btn-danger btn-rounded btn-sm my-0">Borrar</button></span>
-            </td>
-          </tr>
-          <!-- This is our clonable table line -->
-          <tr class="hide">
-            <td class="pt-3-half" contenteditable="true">Pucci Asociados</td>
-            <td class="pt-3-half" contenteditable="true">30-234765-6</td>
-            <td class="pt-3-half" contenteditable="true">pucci@asociados.com</td>
-            <td class="pt-3-half" contenteditable="true">Rio de Janeiro</td>
-            <td class="pt-3-half" contenteditable="true">Brasil</td>
-            <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
-            <td class="pt-3-half">
-              <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
-            </td>
-            <td>
-              <span class="table-remove"><button type="button"
-                  class="btn btn-danger btn-rounded btn-sm my-0">Borrar</button></span>
+              <span class="table-remove"><a href="#!" class="indigo-text"><i class="fa fa-trash"
+                    aria-hidden="true" type="button"></i></a></span>
             </td>
           </tr>
         </tbody>
@@ -90,4 +47,3 @@
     </div>
   </div>
 </div>
-<!-- Editable table -->
