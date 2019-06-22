@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { AdministracionEscribaniasComponent } from './administracion-escribanias/administracion-escribanias.component';
 import { DetalleEscribaniaComponent } from './detalle-escribania/detalle-escribania.component';
+import { Globals } from '../globals';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { DetalleEscribaniaComponent } from './detalle-escribania/detalle-escriba
     HomeComponent,
     LoginComponent,
     AdministracionEscribaniasComponent,
-    DetalleEscribaniaComponent
+    DetalleEscribaniaComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,9 @@ import { DetalleEscribaniaComponent } from './detalle-escribania/detalle-escriba
     MaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    Globals
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
