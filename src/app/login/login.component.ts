@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router"
+import { Router } from "@angular/router"
+import { Globals } from '../../globals';
 
 @Component({
   selector: 'app-login',
@@ -8,41 +9,30 @@ import {Router} from "@angular/router"
 })
 export class LoginComponent implements OnInit {
   
+  
+  //Desde aquí para json global
+  constructor(private globals: Globals, private router: Router) { 
+    this.listaEscribanias = globals.listaEscribanias
+  }
+  listaEscribanias
+  //Hasta aquí para json global
+  
   username : string;
   password : string;
-
-  constructor(private router: Router) { 
-  }
 
   ngOnInit() {
   }
 
   ingresar() {
     
-
-    let jsonUsuarios = [
-      {
-        "username": "admin",
-        "password": "12345",
-        "es_admin": true
-        
-      },
-      {
-        "username": "client",
-        "password": "12345",
-        "es_admin": false
+    for(let i = 0; i < this.listaEscribanias.length; ++i){
+      if (this.listaEscribanias[i].cuit === this.username && this.listaEscribanias[i].password === this.password && this.listaEscribanias[i].es_admin) {
+        this.router.navigate(['/administracion-escribanias'])
       }
-    ]
-
-    console.log(jsonUsuarios.filter(x => x.username === this.username && x.password === this.password)[0].es_admin);
-
-    if (jsonUsuarios.filter(x => x.username === this.username && x.password === this.password)[0].es_admin){
-      this.router.navigate(['/administracion-escribanias'])
+      else{
+        this.router.navigate(['/detalle-escribania'], { queryParams: { cuit: this.listaEscribanias[i].cuit } });
+      }
     }
-    else{
-      this.router.navigate(['/detalle-escribania'])
-    }
-
+    
   }
-
 }

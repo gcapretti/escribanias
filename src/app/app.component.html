@@ -1,11 +1,6 @@
 <mat-toolbar color="primary" fxLayoutGap="8px">
   <button mat-icon-button><mat-icon>home</mat-icon></button>
-  <a mat-icon-button routerLink="/home"><span class="mat-h2">Escribanias</span></a>
-  </mat-toolbar>
-<router-outlet></router-outlet>
+  <div><a routerLink="/home" style="color: white"><span class="mat-h2">Iniciar/Cambiar sesión</span></a></div>
+</mat-toolbar>
 
-<ul>
-    <li *ngFor="let users of Users">
-    <h2>{{users.name}}</h2>
-    </li>
-    </ul>
+<router-outlet></router-outlet>

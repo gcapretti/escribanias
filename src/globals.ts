@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 export class Globals {
     private _listaEscribanias = [
     {
+      "es_admin": true,
+      "password": "12345",
       "cuit": "20-25102569-3",
       "razonsocial": "Estudio Lopez",
       "direccion": "Corrientes 557 4to B",
@@ -15,6 +17,8 @@ export class Globals {
       "email": "estudiolopez@gmail.com"
     },
     {
+      "es_admin": true,
+      "password": "12345",
       "cuit": "30-28107984-3",
       "razonsocial": "Saenz SA",
       "direccion": "Juan Domingo Peron 1220",
@@ -25,7 +29,9 @@ export class Globals {
       "email": "contacto@saenzsa.com.ar"
     },
     {
-      "cuit": "27-20669523-3",
+      "es_admin": false,
+      "password": "12345",
+      "cuit": "27-37835501-3",
       "razonsocial": "Anchorena Legales",
       "direccion": "Ayacucho 120",
       "telefono": "1188451361",
@@ -35,7 +41,9 @@ export class Globals {
       "email": "marisa.anchorena@yahoo.com.ar"
     },
     {
-      "cuit": "20-17291397-1",
+      "es_admin": true,
+      "password": "12345",
+      "cuit": "20-37835500-1",
       "razonsocial": "Burlando Fernando Andres",
       "direccion": "Alicia Moreau De Justo 740 16vo A",
       "telefono": "1143428039",

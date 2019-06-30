@@ -35,7 +35,7 @@
             <td class="pt-3-half" contenteditable="false">{{escribania.ciudad}}</td>
             <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
             <td class="pt-3-half">
-              <span class="table-edit"><a href="#!" class="indigo-text"><i class="fa fa-edit"></i></a></span>
+              <span class="table-edit"><a (click)="editar(escribania.cuit)" class="indigo-text"><i class="fa fa-edit"></i></a></span>
             </td>
             <td class="pt-3-half">
                 <button id="remove" class="indigo-text" class="table-remove" aria-hidden="true" class="fa fa-trash" (click)="deleteRow(escribania.cuit)"></button>

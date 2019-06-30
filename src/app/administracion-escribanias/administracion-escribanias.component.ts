@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
+import { Router } from "@angular/router"
 
 //Import para json global
 import { Globals } from '../../globals';
@@ -25,10 +26,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AdministracionEscribaniasComponent {
 
   //Desde aquí para json global
-  constructor(private globals: Globals) { 
+  constructor(private globals: Globals, private router: Router){
     this.listaEscribanias = globals.listaEscribanias
   }
-  listaEscribanias: { "cuit": string; "razonsocial": string; "direccion": string; "telefono": string; "actividad": string; "provincia": string; "ciudad": string; "email": string; }[] | { cuit: any; }[]
+  listaEscribanias
   //Hasta aquí para json global
 
   displayedColumns: string[] = ['select', 'id', 'nombreEscribania'];
@@ -63,7 +64,11 @@ export class AdministracionEscribaniasComponent {
             this.listaEscribanias.splice(i,1);
         }
     }
-}
+  }
 
+  editar(cuit)
+  {
+    this.router.navigate(['/detalle-escribania'], { queryParams: { cuit: cuit } });    
+  }
   
 }

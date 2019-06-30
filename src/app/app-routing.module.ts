@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'administracion-escribanias', component: AdministracionEscribaniasComponent },
-  { path: 'detalle-escribania', component: DetalleEscribaniaComponent }
+  { path: 'detalle-escribania', component: DetalleEscribaniaComponent },
+  { path: 'detalle-escribania:cuit', component: DetalleEscribaniaComponent }
 ]
 
 @NgModule({
