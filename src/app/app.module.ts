@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { AdministracionEscribaniasComponent } from './administracion-escribanias/administracion-escribanias.component';
 import { DetalleEscribaniaComponent } from './detalle-escribania/detalle-escribania.component';
 import { Globals } from '../globals';
+import { AltaEscribaniaComponent } from './alta-escribania/alta-escribania.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Globals } from '../globals';
     LoginComponent,
     AdministracionEscribaniasComponent,
     DetalleEscribaniaComponent,
+    AltaEscribaniaComponent,
   ],
   imports: [
     BrowserModule,

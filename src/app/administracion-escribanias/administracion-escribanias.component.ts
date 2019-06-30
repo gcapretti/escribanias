@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
-import { Router } from "@angular/router"
+import { Router } from "@angular/router";
 
 //Import para json global
 import { Globals } from '../../globals';
@@ -25,6 +25,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 export class AdministracionEscribaniasComponent {
 
+    
   //Desde aquí para json global
   constructor(private globals: Globals, private router: Router){
     this.listaEscribanias = globals.listaEscribanias
@@ -64,6 +65,11 @@ export class AdministracionEscribaniasComponent {
             this.listaEscribanias.splice(i,1);
         }
     }
+  }
+
+  alta()
+  {
+    this.router.navigate(['/alta-escribania']);    
   }
 
   editar(cuit)
