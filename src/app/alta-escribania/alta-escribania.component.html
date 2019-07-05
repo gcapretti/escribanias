@@ -3,53 +3,53 @@
     <h3 style="padding-bottom:10px;">Alta escribania</h3>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="nombre">Nombre</label>
-        <input type="nombre" class="form-control" id="nombre" placeholder="Nombre"
-          [(ngModel)]="listaEscribanias[0].nombre" [ngModelOptions]="{standalone: true}">
+        <label for="razonsocial">Razon Social</label>
+        <input type="razonsocial" class="form-control" id="razonsocial" placeholder="Razon Social"
+          [(ngModel)]="razonsocial" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-6">
-        <label for="apellido">Apellido</label>
-        <input type="apellido" class="form-control" id="apellido" placeholder="Apellido"
-          [(ngModel)]="listaEscribanias[0].apellido" [ngModelOptions]="{standalone: true}">
+        <label for="actividad">Actividad</label>
+        <input type="text" class="form-control" id="actividad" placeholder="Actividad"
+          [(ngModel)]="apellido" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="cuit">CUIT</label>
-        <input type="cuit" class="form-control" id="cuit" placeholder="CUIT" [(ngModel)]="listaEscribanias[0].cuit"
+        <input type="cuit" class="form-control" id="cuit" placeholder="CUIT" [(ngModel)]="cuit"
           [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label for="inputAddress">Direccion</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Direccion"
-          [(ngModel)]="listaEscribanias[0].direccion" [ngModelOptions]="{standalone: true}">
+        <label for="direccion">Direccion</label>
+        <input type="text" class="form-control" id="direccion" placeholder="Razon Social" placeholder="Direccion"
+          [(ngModel)]="direccion" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputCiudad">Ciudad</label>
-        <input type="text" class="form-control" id="inputCiudad" [(ngModel)]="listaEscribanias[0].ciudad"
+        <label for="ciudad">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" [(ngModel)]="ciudad"
           [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-4">
-        <label for="inputProvincia">Provincia</label>
-        <input type="text" class="form-control" id="inputProvincia" [(ngModel)]="listaEscribanias[0].provincia"
+        <label for="provincia">Provincia</label>
+        <input type="text" class="form-control" id="provincia" placeholder="Provincia" [(ngModel)]="provincia"
           [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputState">Pais</label>
-        <input type="text" class="form-control" id="inputPais" [(ngModel)]="listaEscribanias[0].pais"
+        <label for="telefono">Telefono</label>
+        <input type="text" class="form-control" id="telefono" placeholder="Telefono" [(ngModel)]="pais"
           [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label for="inputAbogado">Abogado</label>
-        <input type="text" class="form-control" id="inputAbogado" [ngModelOptions]="{standalone: true}"
-          [(ngModel)]="listaEscribanias[0].abogado">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" placeholder="email" id="email" [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="email">
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="crearNuevaEscribania()">Crear nueva escribania</button>
+    <button type="button" class="btn btn-primary" (click)="crearNuevaEscribania('cuit','razonsocial','direccion','telefono','actividad','provincia','ciudad','email')">Crear nueva escribania</button>
   </div>
 </form>

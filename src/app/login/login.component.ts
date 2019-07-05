@@ -26,13 +26,14 @@ export class LoginComponent implements OnInit {
   ingresar() {
     
     for(let i = 0; i < this.listaEscribanias.length; ++i){
+      if (this.listaEscribanias[i].cuit === this.username && this.listaEscribanias[i].password === this.password && this.listaEscribanias[i].es_admin === false){
+        this.router.navigate(['/detalle-escribania'], { queryParams: { cuit: this.listaEscribanias[i].cuit } });
+      }
       if (this.listaEscribanias[i].cuit === this.username && this.listaEscribanias[i].password === this.password && this.listaEscribanias[i].es_admin) {
         this.router.navigate(['/administracion-escribanias'])
       }
-      else{
-        this.router.navigate(['/detalle-escribania'], { queryParams: { cuit: this.listaEscribanias[i].cuit } });
       }
     }
     
   }
-}
+

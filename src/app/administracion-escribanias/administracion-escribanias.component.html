@@ -27,13 +27,13 @@
         <tbody>
           <!-- <tr ng-repeat="escribania in Escribanias"> -->
           <!-- Registro clonable -->
-          <tr *ngFor="let escribania of listaEscribanias" [attr.cuit]="escribania.cuit">
+          <tr *ngFor="let escribania of listaEscribanias.slice(1)" [attr.cuit]="escribania.cuit">
             <td class="pt-3-half" contenteditable="false">{{escribania.razonsocial}}</td>
             <td class="pt-3-half" contenteditable="false">{{escribania.cuit}}</td> 
             <td class="pt-3-half" contenteditable="false">{{escribania.email}}</td>
             <td class="pt-3-half" contenteditable="false">{{escribania.direccion}}</td>
             <td class="pt-3-half" contenteditable="false">{{escribania.ciudad}}</td>
-            <td class="pt-3-half"><a href="#!" class="indigo-text"><i class="fa fa-eye"></i></a></td>
+            <td class="pt-3-half"><a (click)="editar(escribania.cuit)" class="indigo-text"><i class="fa fa-eye"></i></a></td>
             <td class="pt-3-half">
               <span class="table-edit"><a (click)="editar(escribania.cuit)" class="indigo-text"><i class="fa fa-edit"></i></a></span>
             </td>

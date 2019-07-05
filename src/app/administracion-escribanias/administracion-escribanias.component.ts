@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { Router } from "@angular/router";
+declare var require: any
+
+
 
 //Import para json global
 import { Globals } from '../../globals';
@@ -69,12 +72,19 @@ export class AdministracionEscribaniasComponent {
 
   alta()
   {
-    this.router.navigate(['/alta-escribania']);    
+    this.router.navigate(['/alta-escribania']);
   }
+
 
   editar(cuit)
   {
     this.router.navigate(['/detalle-escribania'], { queryParams: { cuit: cuit } });    
   }
   
+agregar(obj){
+  this.listaEscribanias.push(obj);
+}
+
+
+
 }
