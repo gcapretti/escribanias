@@ -1,47 +1,48 @@
+
 <form>
   <div class="container" style="margin-top:25px; padding-bottom:5px">
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="nombre">Nombre</label>
-        <input type="nombre" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="listaEscribanias[0].nombre" [ngModelOptions]="{standalone: true}">
+        <label for="razonsocial">Razon Social</label>
+        <input type="text" class="form-control" id="razonsocial" placeholder="razonsocial" [(ngModel)]="escribania.razonsocial" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-6">
-        <label for="apellido">Apellido</label>
-        <input type="apellido" class="form-control" id="apellido" placeholder="Apellido" [(ngModel)]="listaEscribanias[0].apellido" [ngModelOptions]="{standalone: true}">
+        <label for="actividad">Actividad</label>
+        <input type="actividad" class="form-control" id="actividad" placeholder="Actividad" [(ngModel)]="escribania.actividad" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="cuit">CUIT</label>
-        <input type="cuit" class="form-control" id="cuit" placeholder="CUIT" [(ngModel)]="listaEscribanias[0].cuit" [ngModelOptions]="{standalone: true}">
+        <input type="cuit" class="form-control" id="cuit" placeholder="CUIT" [(ngModel)]="escribania.cuit" [ngModelOptions]="{standalone: true}" readonly>
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-4">
         <label for="inputAddress">Direccion</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Direccion" [(ngModel)]="listaEscribanias[0].direccion" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="form-control" id="inputAddress" placeholder="Direccion" [(ngModel)]="escribania.direccion" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-4">
         <label for="inputCiudad">Ciudad</label>
-        <input type="text" class="form-control" id="inputCiudad" [(ngModel)]="listaEscribanias[0].ciudad" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="form-control" id="inputCiudad" [(ngModel)]="escribania.ciudad" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-4">
         <label for="inputProvincia">Provincia</label>
-        <input type="text" class="form-control" id="inputProvincia" [(ngModel)]="listaEscribanias[0].provincia" [ngModelOptions]="{standalone: true}">
+        <input type="text" class="form-control" id="inputProvincia" [(ngModel)]="escribania.provincia" [ngModelOptions]="{standalone: true}">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputState">Pais</label>
-        <input type="text" class="form-control" id="inputPais" [(ngModel)]="listaEscribanias[0].pais" [ngModelOptions]="{standalone: true}">
+        <label for="telefono">Telefono</label>
+        <input type="text" class="form-control" id="telefono" [(ngModel)]="escribania.telefono" [ngModelOptions]="{standalone: true}">
       </div>
     </div>
     <div class="form-row">
       <div class="form-group col-md-4">
-        <label for="inputAbogado">Abogado</label>
-        <input type="text" class="form-control" id="inputAbogado" [ngModelOptions]="{standalone: true}" [(ngModel)]="listaEscribanias[0].abogado">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" [ngModelOptions]="{standalone: true}" [(ngModel)]="escribania.email">
       </div>
     </div>
     
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <button type="submit" class="btn btn-primary" (click)="editar(actualizar)">Guardar Cambios</button>
   </div>
 </form>

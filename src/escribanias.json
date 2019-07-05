@@ -1,6 +1,18 @@
 [
-    {
+  {
       "es_admin": true,
+      "password": "admin",
+      "cuit": "admin",
+      "razonsocial": "",
+      "direccion": "",
+      "telefono": "",
+      "actividad": "",
+      "provincia": "",
+      "ciudad": "",
+      "email": ""
+    },
+    {
+      "es_admin": false,
       "password": "12345",
       "cuit": "20-25102569-3",
       "razonsocial": "Estudio Lopez",
@@ -12,7 +24,7 @@
       "email": "estudiolopez@gmail.com"
     },
     {
-      "es_admin": true,
+      "es_admin": false,
       "password": "12345",
       "cuit": "30-28107984-3",
       "razonsocial": "Saenz SA",
@@ -36,10 +48,10 @@
       "email": "marisa.anchorena@yahoo.com.ar"
     },
     {
-      "es_admin": true,
+      "es_admin": false,
       "password": "12345",
       "cuit": "20-37835500-1",
-      "razonsocial": "Burlando Fernando Andres",
+      "razonsocial": "Burlando Fernando Andress",
       "direccion": "Alicia Moreau De Justo 740 16vo A",
       "telefono": "1143428039",
       "actividad": "Penal",
